@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luke de Boevere - Portfolio</title>
+    <link rel="icon" type="image/png" href="/images/pawel-czerwinski-6lQDFGOB1iw-unsplash.jpg">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="/js/projects.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">Luke de Boevere</div>
+        <nav class="nav">
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="#" class="nav-item">Projecten</a>
+            <a href="contact.html" class="nav-item">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="section">
+            <h2>Mijn Projecten</h2>
+            <div class="projects-grid">
+                <div class="project-item" onclick="openModal('blackhole')">
+                    <div class="project-image">
+                        <img src="/images/black-hole.jpg" alt="Black Hole Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Black Hole Visualization</h3>
+                        <p>Een interactieve 3D visualisatie van een zwart gat met realistische fysica effecten.</p>
+                    </div>
+                    <div class="view-more">→</div>
+                </div>
+
+                <div class="project-item" onclick="openModal('portfolio')">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop" alt="Portfolio Website Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Mijn persoonlijke portfolio mbv HTML CSS en JS</p>
+                    </div>
+                    <div class="view-more">→</div>
+                </div>
+
+                <div class="project-item" onclick="openModal('nonProfit')">
+                    <div class="project-image">
+                        <img src="https://treesforall.nl/app/uploads/2021/08/hero-background-min-1920x0-c-default.webp" alt="Goede doel Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Non-profit website</h3>
+                        <p>Een non profit website nagemaakt mbv HTML CSS en JS.</p>
+                    </div>
+                    <div class="view-more">→</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <img id="modalImage" class="modal-image" src="/images/black-hole.jpg" alt="Black Hole Project">
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modalTitle" class="modal-title"></h2>
+                <p id="modalSubtitle" class="modal-subtitle"></p>
+                
+                <div class="modal-section">
+                    <h4>Technologieën</h4>
+                    <div id="modalTech" class="tech-tags"></div>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Project Beschrijving</h4>
+                    <div id="modalDescription" class="modal-description"></div>
+                </div>
+
+                <div class="modal-section">
+                    <h4>Key Features</h4>
+                    <div id="modalFeatures" class="feature-list"></div>
+                </div>
+
+                <div class="modal-actions">
+                    <a target="_blank" href="#" id="modalDemoLink" class="modal-button primary">
+                        <span>🚀</span> Live Demo
+                    </a>
+                    <a target="_blank" href="#" id="modalGithubLink" class="modal-button">
+                        <span>📁</span> View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

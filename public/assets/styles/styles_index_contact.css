@@ -1,0 +1,331 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-attachment: fixed;
+            background: url( "https://images.unsplash.com/photo-1607499699372-7bb722dff7e2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+            font-family: Jaldi, sans-serif;
+        }
+
+        /* Exact space background with nebula effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px 54px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 16px 32px;
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .nav {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 8px;
+            display: flex;
+            gap: 0;
+        }
+
+        .nav-item {
+            padding: 12px 24px;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Hero Section - exactly positioned */
+        .hero {
+            text-align: center;
+            margin-top: 180px;
+            margin-bottom: 320px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .cta-button {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            padding: 16px 32px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        /* Content Sections - exact width and positioning */
+        .section {
+            width: 1000px;
+            margin: 0 auto 80px auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+
+        .about-text {
+            font-size: 14px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            text-align: left;
+        }
+
+        /* Skills Grid - exact 2x4 layout */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-align: left;
+            padding: 0;
+        }
+
+        .skill-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .skill-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .skill-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .skill-description {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.4;
+        }
+
+        /* Exact brand colors */
+        .html-icon {
+            color: white;
+        }
+
+    
+
+        .css-icon {
+            color: white;
+        }
+
+
+        .js-icon {
+
+            color: #000;
+            
+        }
+
+
+        .csharp-icon {
+            color: white;
+        }
+
+
+        .blender-icon {
+            color: white;
+            font-size: 28px;
+        }
+
+
+
+        .figma-icon {
+            color: white;
+            position: relative;
+        }
+;
+
+        .java-icon {
+            color: white;
+        }
+
+
+        /* Responsive - maintain proportions */
+        @media (max-width: 768px) {
+            .header {
+                padding: 24px;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav {
+                padding: 6px;
+            }
+
+            .nav-item {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+
+            .hero {
+                margin-top: 80px;
+                margin-bottom: 120px;
+                padding: 0 24px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .section {
+                width: calc(100% - 48px);
+                margin: 0 24px 60px 24px;
+                padding: 32px;
+            }
+
+            .skills-grid {
+                gap: 20px;
+            }
+
+            .skill-icon {
+                width: 56px;
+                height: 56px;
+            }
+
+            .skill-title {
+                font-size: 13px;
+            }
+
+            .skill-description {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .skill-item {
+                justify-content: flex-start;
+            }
+        }
+        .footer {
+            text-align: center;
+            font-size: small;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 32px;
+        }
+        .project-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-image {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        .outlook, .discord, .linkedin, .github {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            height: 70px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
